@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.a11y-hidden { 
+    position: absolute !important;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; /* added line */
+}
+
+a {
+  text-decoration : none;
+  color : inherit;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.4rem;
+  margin : 0;
+  color : #181818;
+  font-family: 'Spoqa Han Sans', 'Sans-serif';
+  font-weight: 400;
+}
+
+main{
+  background-color: pink;
+}
+
+footer{
+  background: skyblue;
+}
+
+/* 리스트 스타일 */
+.list-style-none { 
+  list-style-type: none;
+  padding-left:0;
+
+}
+
+
+
+
+
+header{
+  background-color: silver;
+  position: relative;
+}
+
+
+/* 로고 */
+.logo{
+  margin-top: 0;
+  margin-bottom: 0;
+  display: inline;
+}
+
+.logo-img{
+  margin-top: 10px;
+}
+
+
+/* header 멤버 영역 */
+.member{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.member li{
+  padding: 0 5px;
+  margin: 0 10px;
+}
+
+/* 네비게이션 영역 */
+.navigation{
+  display: inline-block;
+  margin: 0 calc(50vw - 307px - 224px);
+}
+.menu { 
+  background: yellow;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 0;
+}
+
+.submenu-hidden{
+  display: none;
+}
+
+.btn-menu{
+  margin: 0;
+  padding: 0 20px;
+  font-size: 1.9rem;
+}
+
+/* 임시 휴관중 */
+.rest{
+  margin: 0;
+}
